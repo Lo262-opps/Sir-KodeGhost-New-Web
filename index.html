@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KodeGhost Tech</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('your-image.jpg') no-repeat center center/cover;
+    color: white;
+}
+
+/* Overlay */
+.overlay {
+    background: rgba(0,0,0,0.75);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    color: #00ffcc;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+}
+
+.btn {
+    padding: 12px 20px;
+    margin: 10px;
+    background: #00ffcc;
+    border: none;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #00ccaa;
+}
+
+/* Sections */
+.section {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Form */
+form {
+    max-width: 400px;
+    margin: auto;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+/* WhatsApp floating button */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+}
+</style>
+
+</head>
+<body>
+
+<div class="overlay">
+
+<!-- NAV -->
+<nav>
+    <h1>KodeGhost Tech</h1>
+    <div>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <h2>We Build Smart Digital Solutions</h2>
+    <p>Bots • Design • Music Videos • Social Media Growth</p>
+
+    <button class="btn" onclick="scrollToSection('contact')">Get Started</button>
+    <button class="btn" onclick="scrollToSection('services')">View Services</button>
+</div>
+
+<!-- SERVICES -->
+<div id="services" class="section">
+    <h2>Our Services</h2>
+
+    <div class="services">
+        <div class="card">
+            <h3>Automation Bots</h3>
+            <p>We create powerful bots to automate your business.</p>
+        </div>
+
+        <div class="card">
+            <h3>Design</h3>
+            <p>Logos, branding and modern visuals.</p>
+        </div>
+
+        <div class="card">
+            <h3>Music Video Production</h3>
+            <p>High-quality creative video shooting.</p>
+        </div>
+
+        <div class="card">
+            <h3>Social Media Growth</h3>
+            <p>We grow and manage your online presence.</p>
+        </div>
+    </div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="section">
+    <h2>Get In Touch</h2>
+
+    <form action="https://formspree.io/f/xdapojkz" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+
+        <select name="service">
+            <option>Automation Bots</option>
+            <option>Design</option>
+            <option>Music Videos</option>
+            <option>Social Media Growth</option>
+        </select>
+
+        <textarea name="message" placeholder="Your Message"></textarea>
+
+        <button class="btn" type="submit">Send Message</button>
+    </form>
+</div>
+
+</div>
+
+<!-- WhatsApp -->
+<a class="whatsapp" href="https://wa.me/263713388737" target="_blank">💬</a>
+
+<script>
+function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({behavior: 'smooth'});
+}
+</script>
+
+</body>
+</html>
